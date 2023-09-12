@@ -26,3 +26,4 @@ significant.
 - [ ] add about me
 
 - [ ] add social links
+- [ ] add a links to competitive coding profiles
