@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+  </head>
+  <body>
+    <h1>ChatBot Page</h1>
+  
+  <script>
+    const botId = '661a887793dba6dc35ae8852', token =
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnQUFBQUFCbUdvaXBfOVdnNjN4Sk1FY2FVTEZEQ2RpdEt1bDJ3ek90TUR6dHhYRTU0MXV0N3pEWVVjS2JWbmE0NUQ4THFzb19DeEtqZHp1cFp1U3I5b1JYMkwwSXVNRXNIMUY3ZE96clgyblV0TjB1dWtiVlpWOTUzUTd0MzZSMzMwa05WbFJjcE04dVdvU3psNkJrcjl1NWc1czdmZ2JwcW9CZ2F0Y0E0U3JROFZadlpxX2FocndMZy1WX25lR3JxMklpUzM3T3kzdXR1NXNqRkM3UWlFVHJZS1g4NzhuX0hacHZlZXdrdUxQYTFsOUlmUHpiUHZ0c0VmY2IyQm5HWTEwU0FtTEFzS3BqX1RON0dyTGZLODEzMVRDcDJlOGkwSGswYUdZTzNRXzc4QWNaaGNrRDdBMDBabVJUYTNkWFFWUWZ6SUxRYVllZi1oQ2lrTDR0VEdYZ3licWw4czhicUE9PSIsInZlcnNpb24iOiIyLjAiLCJpYXQiOjE3MTMwMTQ5NTN9.VI1gTyjH5r7zgAOoCuX8Cw2_1snT3VXOQVTwEhklosc',
+    kaironURL = 'https://kairon-api.nimblework.com', origin = 'https://kairon.nimblework.com';const
+    initClient=()=>{fetch(`${kaironURL}/api/bot/${botId}/chat/client/config/${token}`,{headers:{Accept:'application/json','Content-Type':'application/json'}}).then(t=>t.json()).then(t=>{if(t.success){const
+    n=t.data;n.container='#kairon-client-container',n.botId=`${botId}`,window.ChatClient?window.ChatClient(n):top.ChatClient&&top.ChatClient(n)}})},body=document.getElementsByTagName('body')[0],container=document.createElement('div');container.id='kairon-client-container';const
+    scriptTag=document.createElement('script');scriptTag.src=`${origin}/cdn/kairon_client.js`,scriptTag.onload=initClient,body.appendChild(container),body.appendChild(scriptTag);
+    </script>
+    </body>
+</html>
+
