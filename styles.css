@@ -1,5 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:40");
+
 body
 {
     background-color: black;
     color:whitesmoke;
+}
+
+.blinking-cursor {
+    color: blue;
+  user-select: none;
+  animation: blink 1s steps(2, start) infinite;
+}
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+#type-text {
+    color: darkgrey;
 }
