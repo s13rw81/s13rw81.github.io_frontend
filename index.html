@@ -1,126 +1,193 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
+  <title>Sourav B. Roy | Python Backend Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="scripts.js"></script>
-  <title>Sourav B. Roy | website</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap (layout only) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
-
-
 </head>
 
 <body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
-    <h1>
-      <span>Sourav Basu Roy </span>
-        <span is="type-async" id="type-text"></span>
-        <span class="blinking-cursor">_</span>
-    </h1>
-    <hr>
-    <div class="row">
-      <a href="cover_letter.html" target="_blank" class="col d-flex justify-content-around text-decoration-none">Cover
-        Letter</a>
-      <a href="https://t.me/s13rw81" class="col d-flex justify-content-around text-decoration-none">Telegram</a>
-      <a href="https://join.skype.com/invite/v2710RzU5EpV"
-        class="col d-flex justify-content-around text-decoration-none">Skype</a>
-      <a href="https://github.com/s13rw81?tab=repositories" target="_blank"
-        class="col d-flex justify-content-around text-decoration-none">GitHub</a>
+    <a class="navbar-brand" href="#">Sourav B. Roy</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Hire Me</a></li>
+      </ul>
     </div>
-    <div class="row">
-      <div class="col-12">
-        <pre>
-The mind is a scattered thing.
-It concerns itself
-with thousands of different items at once.
-Things you see around you.
-Things you hear and smell.
-Things you think about.
-Things you try not to think about.
-You must learn to concentrate such that
-you can visualize at will one item,
-one item only, and nothing else.
-If you work hard, you may be able
-to concentrate your conscious mind
-on any one object you select
-for around three and one-half minutes.
-This will take
-about 20 years of diligent, daily effort.
-"Twenty years!" I cried.
-Twenty years. It may take longer.
-That's the usual time,
-if you are able to do it at all.
-I'll be an old man by then!
-The time varies.
-Some take ten years, some take thirty.
-On extremely rare occasions,
-a special person comes along
-who's able to develop the power
-in only one or two years,
-but this is one in a billion. Not you.
-Is it that difficult
-to concentrate the mind--
-Almost impossible. Try it and see.
-Shut your eyes and think of something.
-Think of just one object.
-Visualize it. See it before you.
-In a few seconds, your mind will wander.
-Other thoughts will creep in.
-It's a very difficult thing.
-Thus spoke the great, wise, old yogi.
-</pre>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container text-center">
+    <h1>
+      Sourav Basu Roy
+    </h1>
+    <h2>
+      <span is="type-async" id="type-text"></span>
+      <span class="blinking-cursor">_</span>
+    </h2>
+
+    <p class="hero-subtitle">
+      Python Backend Developer • Django • APIs • Cloud
+      <!-- TODO: short one-liner about your value -->
+    </p>
+
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Hire Me</a>
+      <a href="#projects" class="btn btn-outline-light">View Work</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container">
+    <h3 class="section-title">About Me</h3>
+    <p class="section-text">
+      <!-- TODO: Write a concise professional summary.
+           Example:
+           "I'm a Python backend developer with X years of experience building scalable
+           web applications, APIs, and data-driven systems..." -->
+    </p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section section-alt">
+  <div class="container">
+    <h3 class="section-title">Skills</h3>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card skill-card">
+          <h5>Backend</h5>
+          <ul>
+            <!-- TODO -->
+            <li>Python</li>
+            <li>Django / Django REST Framework</li>
+            <li>FastAPI</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card skill-card">
+          <h5>Databases & Infra</h5>
+          <ul>
+            <!-- TODO -->
+            <li>PostgreSQL / MySQL</li>
+            <li>Redis</li>
+            <li>Docker</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card skill-card">
+          <h5>Cloud & Tools</h5>
+          <ul>
+            <!-- TODO -->
+            <li>AWS / GCP</li>
+            <li>Git & CI/CD</li>
+            <li>Linux</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-  <script>
-    async function init() {
-      const node = document.querySelector("#type-text");
+</section>
 
-      while (true) {
-        await node.type("Python Developer");
-        await sleep(2000);
-        await node.delete("Python Developer");
-        await node.type("Algo Trader");
-        await sleep(2000);
-        await node.delete("Algo Trader");
-        await node.type("Bangalore / Remote");
-        await sleep(2000);
-        await node.delete("Bangalore / Remote");
-      }
-    }
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <div class="container">
+    <h3 class="section-title">Experience</h3>
 
-    // Source code for the typeing effect
-    const sleep = (time) => new Promise((resolve) => setTimeout(resolve, time));
+    <!-- TODO: Repeat this block per role -->
+    <div class="timeline-item">
+      <h5>Senior Python Developer — Company Name</h5>
+      <span class="timeline-date">YYYY – YYYY</span>
+      <p>
+        <!-- TODO: Bullet-style achievements -->
+        Built scalable backend systems, improved performance, owned APIs, etc.
+      </p>
+    </div>
+  </div>
+</section>
 
-    class TypeAsync extends HTMLSpanElement {
-      get typeInterval() {
-        const randomMs = 100 * Math.random();
-        return randomMs < 50 ? 10 : randomMs;
-      }
+<!-- PROJECTS -->
+<section id="projects" class="section section-alt">
+  <div class="container">
+    <h3 class="section-title">Selected Projects</h3>
 
-      async type(text) {
-        for (let character of text) {
-          this.innerText += character;
-          await sleep(this.typeInterval);
-        }
-      }
+    <div class="row g-4">
+      <!-- TODO: Repeat per project -->
+      <div class="col-md-6">
+        <div class="card project-card">
+          <h5>Project Name</h5>
+          <p>
+            <!-- TODO -->
+            Short description of the project, problem solved, and tech used.
+          </p>
+          <div class="project-links">
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Live Demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      async delete(text) {
-        for (let character of text) {
-          this.innerText = this.innerText.slice(0, this.innerText.length - 1);
-          await sleep(this.typeInterval);
-        }
-      }
-    }
-    customElements.define("type-async", TypeAsync, { extends: "span" });
-    init();
-  </script>
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="container text-center">
+    <h3 class="section-title">Hire Me</h3>
+
+    <p class="section-text">
+      <!-- TODO -->
+      Interested in working together? Reach out via any of the platforms below.
+    </p>
+
+    <div class="contact-links">
+      <!-- TODO: Replace with real links -->
+      <a href="mailto:your@email.com"><i class="bi bi-envelope"></i></a>
+      <a href="https://github.com/yourusername" target="_blank"><i class="bi bi-github"></i></a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="bi bi-linkedin"></i></a>
+      <a href="https://t.me/yourusername" target="_blank"><i class="bi bi-telegram"></i></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container text-center">
+    © <span id="year"></span> Sourav B. Roy
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="scripts.js"></script>
 
 </body>
 </html>
