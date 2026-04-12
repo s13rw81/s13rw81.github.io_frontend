@@ -41,28 +41,10 @@ document.getElementById("year").textContent = new Date().getFullYear();
 initType();
 
 
-// LeetCode fetch start
+// LeetCode fetch start (STATIC JSON VERSION)
 async function loadLeetCode() {
   try {
-    const res = await fetch("https://leetcode.com/graphql/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Referer": "https://leetcode.com"
-      },
-      body: JSON.stringify({
-        query: `query userPublicProfile($username: String!) {
-          matchedUser(username: $username) {
-            username
-            profile {
-              ranking
-            }
-          }
-        }`,
-        variables: { username: "s13rw81" }
-      })
-    });
-
+    const res = await fetch("/leetcode.json");
     const data = await res.json();
 
     const rank = data?.data?.matchedUser?.profile?.ranking;
