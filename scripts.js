@@ -39,3 +39,43 @@ async function initType() {
 
 document.getElementById("year").textContent = new Date().getFullYear();
 initType();
+
+
+// LeetCode fetch start
+async function loadLeetCode() {
+  try {
+    const res = await fetch("https://leetcode.com/graphql/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Referer": "https://leetcode.com"
+      },
+      body: JSON.stringify({
+        query: `query userPublicProfile($username: String!) {
+          matchedUser(username: $username) {
+            username
+            profile {
+              ranking
+            }
+          }
+        }`,
+        variables: { username: "s13rw81" }
+      })
+    });
+
+    const data = await res.json();
+
+    const rank = data?.data?.matchedUser?.profile?.ranking;
+
+    if (rank) {
+      document.getElementById("leetcode-rank").textContent = rank.toLocaleString();
+      document.getElementById("leetcode-container").style.display = "inline-flex";
+    }
+
+  } catch (err) {
+    console.log("LeetCode fetch failed:", err);
+  }
+}
+
+loadLeetCode();
+// LeetCode fetch end
